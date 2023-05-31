@@ -1,4 +1,4 @@
-# Introduction to Cognit
+<!-- # Introduction to Cognit
 
     Overview.
     Why Cognito
@@ -39,7 +39,7 @@
     Why use IAM Center
     IAM Center Delegated Administration
     Best practices for security
-    Best practices for permissions
+    Best practices for permissions -->
 
 
 
@@ -87,74 +87,37 @@ When amazon cognito user pool is implemented in you application, users can be ma
 Creating a user pool is a great way to manage, authenticate and authorize users on your app or API. With user pools, you have a self-service and administrator-driven user management tool that can act both as an identity provider (IdP) or a service provider (SP) to a workforce or consumer IdP. One benefit of user pools is that they don't require integration with an identity pool - they can issue authenticated JSON web tokens (JWTs) straight to your app, web server, or API.
 
 ### Identity Pool
- Identity pool is a collection of unique identifiers, or identities, that you assign to your users or guests and authorize to receive temporary AWS credentials.
+Identity pool comprises of unique identifiers or identities allocated to your users or guests, who are then authorized to retrieve temporary AWS credentials with limited privileges to access other AWS resources. This ensures enhanced security measures and controlled authorization.
 
+<!-- Fine-grained access control. -->
+Can be integrated with other identity service providers (IdP).
 
+### Differences between Identity Pool and User Pool
 
+Identity pool helps users to use AWS services.
 
+The identity pool uses the JWT token from the User pool to get AWS Credentials from Cognito and use that to log in and use the application in AWS
 
+**Where as**
 
+The user pool helps users to use mobile and web apps.
 
+It authenticates the credentials given by the user verifies that and gives back a JWT token to the user to access the mobile and web app
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Cor Functionalities of Amazon Cognito
-**1. User Management**
-**2. Authentication**
-**3. Synchronization Across Devices**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Core functionalities of amazon cognito
+1. User Management
+2. Authentication
+3. Synchronization Across Devices
 
 #### Strengths of Amazon Cognito
-**1. Easy to set-up.**
-**2. Simple integration**
-**3. Easy to configure the UserPools, and the Identity Pools.**
-**4. Seamless Integration with AWS services like Lambda, IAM, etc.**
-**5. Cheaper than other providers.**
-**6. Amazon cognito allows you to gather app    users information easily and conviniently.**
-**7. Completely scaled and managed by AWS.
-8. A good budget option even for large scale business**
+1. Easy to set-up.
+2. Simple integration
+3. Easy to configure the UserPools, and the Identity Pools.
+4. Seamless Integration with AWS services like Lambda, IAM, etc.
+5. Cheaper than other providers.
+6. Amazon cognito allows you to gather app    users information easily and conviniently.
+7. Completely scaled and managed by AWS.
+8. A good budget option even for large scale business
 
 
 #### Weakness's of Amazon Cognito
@@ -167,3 +130,66 @@ Amazon prides itself on providing world-class security, so much so that its disa
 
 AWS services are amazing, but sometimes for a better solution, developers use other third-party services. Although AWS Cognito can be integrated with them, their integration flow is nowhere as smooth as it is with other AWS services. Hence, it is a significant drawback for us.
 
+
+## AWS IAM (Identity and Access Management)
+
+This is a web service provided by amazon that helps you to securely control access to your AWS resources. It gives privileges and permissions to users.
+
+
+
+### How it works.
+ You can specify who can access which service and which resource in AWS, centrally manage fine grained permissions and analyse access to refine permissions across AWS.
+![alt text for screen readers](iam.png "Text to show on mouseover")
+<!-- diagram for IAM features cycle set anylyse refine -->
+![alt text for screen readers](iamarchitecture.png "Text to show on mouseover")
+### Why use IAM?
+Use IAM to manage and scale workload and workforce access securely supporting your agility and innovation in AWS.
+
+### IAM best Security practices
+Two types of identities in IAM: human users and workloads.
+
+- Require human users to use federation with an identity provider to access AWS using temporary credentials
+- Require workloads to use temporary credentials with IAM roles to access AWS.
+- Require MFA (Multi-Factor Authentication).
+- Rotate access key regularly (best for long term credentials).
+- Safe guard your users credentials and dont use them for everyday tasks (with the help of AWS guard duty).
+  
+Security best practices can more efficient with services such **AWS trusted Advisor, IAM access analyzer**
+
+### IAM best permissions practices
+- Apply least-privilege permissions (By giving users the least permissions to get a task done).
+- Establish permissions guardrails (data perimeter) across multiple accounts.---------------More to add see notebook
+- Fine grain access control with conditions.
+  
+   example of IAM condition
+
+        "condition":{
+            "{operator}" :
+            {"{key}" : "{value}"}
+        }
+
+The capabilities of AWS IAM are extended in Identity Center.
+
+## Identity Center
+Identity center extends the capabilites of IAM by providing an interface to centrally manage users, create users and groups in AWS IAM and also provide short term credentials to users and groups.
+
+##### Identity Center have the following characteristics
+- One place to create or connect your workforce identity.
+- Freedom to choose your prefered identity source for use across AWS.
+- Multi-Account permissions to manage fine grained access to AWS resources.
+- Application assignments to manage access to IAM identities center enabled and other cloud apps.
+
+### Concept of Identity Center
+- User, groups, provisioning
+- Identity Provider (user creation, management and authentication).
+- SAML and SCIM (Industry standards of passing information between identity provider and service provider or application).
+- Permission set. Contains one or more IAM policies that gets applied to one or more AWS accounts
+- ABAC. capability that allows athentication based on attributes of an identity or resource
+- Entitlement/Assignments
+    ```
+    AWS account 
+     + user or group 
+     + permission set
+    ```
+
+![alt text for screen readers](idc-01.jpg "Text to show on mouseover")
