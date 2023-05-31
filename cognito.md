@@ -80,7 +80,7 @@ This means that an anonymous user of our application (for example, a mobile or s
 In this case, Amazon Cognito acts as an Identity Provider (IdP) .
 
 When this registered user wants to log in, the User Pool will be used as the source of truth to assess the authenticity of the supplied credentials; if valid, a JSON Web Token (JWT) will be returned that is used to access resources of the application.
-![alt text for screen readers](cognitod.png "Text to show on mouseover")
+![cognito auth image](https://raw.githubusercontent.com/vernyuy/intro_to_cognito/main/cognitoD.png)
 
 When amazon cognito user pool is implemented in you application, users can be managed from your AWS console account.
 
