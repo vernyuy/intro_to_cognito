@@ -1,32 +1,41 @@
 # Introduction to Cognito
+&nbsp; &nbsp;[Overview.](#overview)
 
-[Overview.](#overview)
-[Why Cognito](#why-cognito)
-[Cognito features](#cognito-features)
-[User pool](#user-pool)
-[Identity pool](#identity-pool)
+&nbsp; &nbsp;[Why Cognito](#why-amazon-cognito)
+&nbsp; &nbsp;[Cognito features](#cognito-features)
+<!-- &nbsp; &nbsp;[User pool](#user-pool) -->
+<!-- [Identity pool](#identity-pool)
 [Role based access control](#role-based-access-control)
 [Cognito pools](#cognito-pools)
 [Cognito features](#cognito-features)
 [Cognito features](#cognito-features)
-[Cognito features](#cognito-features)
-        
+[Cognito features](#cognito-features) -->
+<!--         
         Role based access control
-        Attributes for access control
-    Cognito pools
-        User pool
-        Implementing user pools
-        Identity pool
-        Implementing Identity pool
-        Differences between user pool and identity pool
-    Functionality of Cognito
-        User Management
-        Authentication
-        Synchronization across devices
-    Advantages of Cognito
-    Disadvantages of Cognito
-    When to use Cognito
+        Attributes for access control -->
+&nbsp; &nbsp;[Cognito pools](#amazon-cognito-pools)
+&nbsp; &nbsp; &nbsp; [User pool](#user-pool)
+&nbsp; &nbsp; &nbsp; &nbsp;  [Creating cognito user pool](#creating-a-cognito-user-pool-in-aws-console)
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Cognito user pool use cases](#when-should-you-use-cognito-user-pool)
+        <!-- Implementing user pools -->
+       &nbsp; &nbsp; &nbsp; [Identity pool](#identity-pool)
+        <!-- Implementing Identity pool -->
+&nbsp; &nbsp; [Differences between user pool and identity pool](#differences-between-identity-pool-and-user-pool)
+&nbsp; &nbsp; [Cognito Pricing](#amazon-cognito-pricing)
+&nbsp; &nbsp; &nbsp; &nbsp;[Free Tier](#free-tier)
+&nbsp; &nbsp; &nbsp; &nbsp;[Pricing Tier](#pricing-tier)
+&nbsp; &nbsp; [Advantages of Cognito](#strengths-of-amazon-cognito)
+&nbsp; &nbsp; [Weaknesses of cognito](#weaknesses-of-amazon-cognito)
+&nbsp; &nbsp; [Cognito Sync](#cognito-sync)
 
+[IAM (Identity Access and Management)](#aws-iam-identity-and-access-management)
+&nbsp; &nbsp; [Why IAM](#why-use-iam)
+&nbsp; &nbsp; [How IAM Works](#how-it-works)
+&nbsp; &nbsp; [IAM permision best practices](#iam-best-permissions-practices)
+&nbsp; &nbsp; [IAM security best practices](#iam-best-security-practices)
+&nbsp; [IAM Identity Center](#identity-center)
+&nbsp; &nbsp; &nbsp; [How IAM identity center works](#how-iam-identity-center-works)
+<!-- 
     IAM (Identity Access Management) Previously called SSO
 
     What it is.
@@ -43,9 +52,7 @@
     How it works.
     Deployment options
     Why use IAM Center
-    IAM Center Delegated Administration
-    Best practices for security
-    Best practices for permissions -->
+    IAM Center Delegated Administration -->
 
 
 
@@ -78,9 +85,8 @@ As a developer, you face an uphill battle when it comes to coding the service to
 5. Security
 6. Data Synchronization Across Devices
 ## Amazon cognito Pools
-Amazon cognito has four main features
-##### 1). User Pool
-##### 2). Identity Pool
+ 1. User Pool
+ 2. Identity Pool
 <!-- ##### 3). Role Based Access control (RBAC)
 ##### 4). Attributes for Acces Control -->
 
@@ -102,7 +108,7 @@ When this registered user wants to log in, the User Pool will be used as the sou
 
 When amazon cognito user pool is implemented in you application, users can be managed from your AWS console account.
 
-#### Creating a Cognito User Pool
+#### Creating a Cognito User Pool In AWS console
 
 To create a user pool in aws console, we have 7 main steps that we will go through.
 
@@ -185,7 +191,7 @@ More custom attributes can be added to your user pool.
 ##### step 4. Configure message delivery
 Choose send email with cognito since this is an introduction to cognito. This allows cognito to email to users with code the validate/confirm their account creation.
 
-![cognito auth image](images/deliverymessage.png).
+![cognito auth image](images/deliverymessage.png)
 
 Click the **Next** button.
 
@@ -194,13 +200,14 @@ Set up app integration for your user pool with Cognito's built-in authentication
 
 provide the user pool name.
 
-![cognito auth image](images/poolname.png).
+![cognito auth image](images/poolname.png)
+
 select hosted UI. 
 
-![cognito auth image](images/hostedUi.png).
+![cognito auth image](images/hostedUi.png)
 Select **use cognito domain** and add a prefix to the provided domain.
 
-![cognito auth image](images/domain.png).
+![cognito auth image](images/domain.png)
 
 
 ***Initial app client***
@@ -285,18 +292,19 @@ Amazon prides itself on providing world-class security, so much so that its disa
 AWS services are amazing, but sometimes for a better solution, developers use other third-party services. Although AWS Cognito can be integrated with them, their integration flow is nowhere as smooth as it is with other AWS services. Hence, it is a significant drawback for us.
 
 
-## AWS IAM (Identity and Access Management)
+# AWS IAM Identity and Access Management
 
 This is a web service provided by amazon that helps you to securely control access to your AWS resources. It gives privileges and permissions to users.
 
-
-
 ### How it works.
  You can specify who can access which service and which resource in AWS, centrally manage fine grained permissions and analyse access to refine permissions across AWS.
-![alt text for screen readers](iam.png "Text to show on mouseover")
-<!-- diagram for IAM features cycle set anylyse refine -->
-![alt text for screen readers](iamarchitecture.png "Text to show on mouseover")
-#### Why use IAM?
+![](iam.png "Overview of IAM")
+![IAM](IAMArchitecture.png "IAM")
+
+IAM features cycle 
+![IAM](images/cycle-01.png "IAM")
+set anylyse refine
+### Why use IAM?
 Use IAM to manage and scale workload and workforce access securely supporting your agility and innovation in AWS.
 
 #### IAM best Security practices
@@ -329,7 +337,7 @@ Identity center extends the capabilites of IAM by providing an interface to cent
 
 ![Overview of IAM Identity Center](images/idc.png "Overview of IAM identity Center").
 
-##### Identity Center have the following characteristics
+##### Identity Center characteristics
 - One place to create or connect your workforce identity.
 - Freedom to choose your prefered identity source for use across AWS.
 - Multi-Account permissions to manage fine grained access to AWS resources.
