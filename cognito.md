@@ -2,7 +2,9 @@
 &nbsp; &nbsp;[Overview.](#overview)
 
 &nbsp; &nbsp;[Why Cognito](#why-amazon-cognito)
+
 &nbsp; &nbsp;[Cognito features](#cognito-features)
+
 <!-- &nbsp; &nbsp;[User pool](#user-pool) -->
 <!-- [Identity pool](#identity-pool)
 [Role based access control](#role-based-access-control)
@@ -14,45 +16,40 @@
         Role based access control
         Attributes for access control -->
 &nbsp; &nbsp;[Cognito pools](#amazon-cognito-pools)
+
 &nbsp; &nbsp; &nbsp; [User pool](#user-pool)
+
 &nbsp; &nbsp; &nbsp; &nbsp;  [Creating cognito user pool](#creating-a-cognito-user-pool-in-aws-console)
+
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Cognito user pool use cases](#when-should-you-use-cognito-user-pool)
-        <!-- Implementing user pools -->
-       &nbsp; &nbsp; &nbsp; [Identity pool](#identity-pool)
-        <!-- Implementing Identity pool -->
+
 &nbsp; &nbsp; [Differences between user pool and identity pool](#differences-between-identity-pool-and-user-pool)
+
 &nbsp; &nbsp; [Cognito Pricing](#amazon-cognito-pricing)
+
 &nbsp; &nbsp; &nbsp; &nbsp;[Free Tier](#free-tier)
+
 &nbsp; &nbsp; &nbsp; &nbsp;[Pricing Tier](#pricing-tier)
+
 &nbsp; &nbsp; [Advantages of Cognito](#strengths-of-amazon-cognito)
+
 &nbsp; &nbsp; [Weaknesses of cognito](#weaknesses-of-amazon-cognito)
+
 &nbsp; &nbsp; [Cognito Sync](#cognito-sync)
 
 [IAM (Identity Access and Management)](#aws-iam-identity-and-access-management)
+
 &nbsp; &nbsp; [Why IAM](#why-use-iam)
+
 &nbsp; &nbsp; [How IAM Works](#how-it-works)
+
 &nbsp; &nbsp; [IAM permision best practices](#iam-best-permissions-practices)
+
 &nbsp; &nbsp; [IAM security best practices](#iam-best-security-practices)
+
 &nbsp; [IAM Identity Center](#identity-center)
+
 &nbsp; &nbsp; &nbsp; [How IAM identity center works](#how-iam-identity-center-works)
-<!-- 
-    IAM (Identity Access Management) Previously called SSO
-
-    What it is.
-    How it works.
-    Why use IAM
-    IAM features
-    Best practices for security
-    Best practices for permissions
-
-    IAM Identity Access Management Center Previously called SSO
-
-    What it is.
-    Concept
-    How it works.
-    Deployment options
-    Why use IAM Center
-    IAM Center Delegated Administration -->
 
 
 
