@@ -191,7 +191,7 @@ More custom attributes can be added to your user pool.
 ##### step 4. Configure message delivery
 Choose send email with cognito since this is an introduction to cognito. This allows cognito to email to users with code the validate/confirm their account creation.
 
-![cognito auth image](images/deliverymessage.png)
+![cognito auth image](images/deliveryMessage.png)
 
 Click the **Next** button.
 
@@ -213,7 +213,7 @@ Select **use cognito domain** and add a prefix to the provided domain.
 ***Initial app client***
 Configure an app client. App clients are single-app platforms in your user pool that have permissions to call unauthenticated API operations. A user pool can have multiple app clients. Here you have to provide the app client name and the callback url that the app will redirect to after authentication.
 
-![cognito auth image](images/initialapp.png).
+![cognito auth image](images/initialApp.png).
 
 Click **Next** when done.
 
@@ -334,7 +334,7 @@ Security best practices can more efficient with services such **AWS trusted Advi
 The capabilities of AWS IAM are extended in Identity Center.
 
 ## Identity Center
-Identity center extends the capabilites.
+Identity center extends the capabilites of IAM also called IAM Identity Center.
 
 With Identity center, you can now manage your users more efficiently than ever before! IAM capabilities are extended to make it easy to centrally create users, groups and provide short-term credentials. Say goodbye to old cluttered user management and hello to stream-lined IAM with Identity center.
 
