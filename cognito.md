@@ -294,13 +294,14 @@ AWS services are amazing, but sometimes for a better solution, developers use ot
 
 # AWS IAM Identity and Access Management
 
-This is a web service provided by amazon that helps you to securely control access to your AWS resources. It gives privileges and permissions to users.
+IAM, the ever-helpful web service from Amazon, is here to offer a secure way for you to control access to your AWS resources. With its easy-to-use privileges and permissions system, you can rest easy knowing that only the right people are able to access what they need.
 
 ### How it works.
  You can specify who can access which service and which resource in AWS, centrally manage fine grained permissions and analyse access to refine permissions across AWS.
 ![](iam.png "Overview of IAM")
 ![IAM](IAMArchitecture.png "IAM")
 
+You have the power to grant access to certain resources and services through AWS. With the ability to centrally manage permissions on a granular level, you can carefully analyze access and refine permissions to suit your needs across AWS. It's like having a personal assistant to manage your AWS permissions and access.
 IAM features cycle 
 ![IAM](images/cycle-01.png "IAM")
 set anylyse refine
@@ -333,7 +334,9 @@ Security best practices can more efficient with services such **AWS trusted Advi
 The capabilities of AWS IAM are extended in Identity Center.
 
 ## Identity Center
-Identity center extends the capabilites of IAM by providing an interface to centrally manage users, create users and groups in AWS IAM and also provide short term credentials to users and groups.
+Identity center extends the capabilites.
+
+With Identity center, you can now manage your users more efficiently than ever before! IAM capabilities are extended to make it easy to centrally create users, groups and provide short-term credentials. Say goodbye to old cluttered user management and hello to stream-lined IAM with Identity center.
 
 ![Overview of IAM Identity Center](images/idc.png "Overview of IAM identity Center").
 
