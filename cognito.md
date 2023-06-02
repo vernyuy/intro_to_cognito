@@ -49,6 +49,12 @@
 
 &nbsp; [IAM Identity Center](#identity-center)
 
+&nbsp; &nbsp; &nbsp; [How IAM identity center works](#identity-center-characteristics)
+
+&nbsp; &nbsp; &nbsp; [How IAM identity center works](#concept-of-identity-center)
+
+&nbsp; &nbsp; &nbsp; [How IAM identity center works](#features-of-iam-identity-center)
+
 &nbsp; &nbsp; &nbsp; [How IAM identity center works](#how-iam-identity-center-works)
 
 
