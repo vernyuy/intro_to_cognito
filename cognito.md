@@ -49,11 +49,11 @@
 
 &nbsp; [IAM Identity Center](#identity-center)
 
-&nbsp; &nbsp; &nbsp; [How IAM identity center works](#identity-center-characteristics)
+&nbsp; &nbsp; &nbsp; [Characteristics of identity center](#identity-center-characteristics)
 
-&nbsp; &nbsp; &nbsp; [How IAM identity center works](#concept-of-identity-center)
+&nbsp; &nbsp; &nbsp; [Concept of identity center](#concept-of-identity-center)
 
-&nbsp; &nbsp; &nbsp; [How IAM identity center works](#features-of-iam-identity-center)
+&nbsp; &nbsp; &nbsp; [features of identity center](#features-of-iam-identity-center)
 
 &nbsp; &nbsp; &nbsp; [How IAM identity center works](#how-iam-identity-center-works)
 
