@@ -158,7 +158,7 @@ Users can authenticate with a TOTP(Time-based One-Time Password) from an authent
 2. SMS message
 Users can authenticate with a code sent by SMS message to a verified phone number. SMS messages are charged separately by Amazon SNS (Simple Notification Service).
 
-![cognito auth image](images/mfa.png)
+![cognito auth image](images/MFA.png)
 
 ***User account recovery***
 Configure how users will recover their account when they forget their password. Recipient message and data rates apply.
@@ -173,7 +173,7 @@ Determine how new users will verify their identities when signing up and which a
 ***Self-Service sign-up***
 Choose whether new users can register account for themselves or not.
 
-![cognito auth image](images/selfssu.png)
+![cognito auth image](images/selfSSu.png)
 
 ***Attribute verification and user account confirmation***
 
@@ -204,7 +204,8 @@ provide the user pool name.
 
 select hosted UI. 
 
-![cognito auth image](images/hostedUi.png)
+![cognito auth image](images/hostedUI.png)
+
 Select **use cognito domain** and add a prefix to the provided domain.
 
 ![cognito auth image](images/domain.png)
